@@ -1,6 +1,6 @@
 TaskManager - Guia de Execução
 
-Um sistema completo de gerenciamento de tarefas, desenvolvido com .NET 9 (ASP.NET Core) no backend, React no frontend e SQL Server como banco de dados.
+Um sistema completo de gerenciamento de tarefas, desenvolvido com .NET 8 (ASP.NET Core) no backend, React no frontend e SQL Server como banco de dados.
 O projeto está totalmente containerizado com Docker, permitindo executar tudo com um único comando.
 
 Video explicativo do projeto - Link: https://drive.google.com/file/d/1JjfxLymftcLzJe-1HBNuS7aF1OPZgUip/view?usp=sharing
@@ -8,9 +8,9 @@ Video explicativo do projeto - Link: https://drive.google.com/file/d/1JjfxLymftc
 ------------------------------------------------------------
 🚀 Tecnologias Utilizadas
 
-Backend (.NET 9)
+Backend (.NET 8)
 - ASP.NET Core Web API
-- Entity Framework Core 9
+- Entity Framework Core 8
 - Clean Architecture (camadas: Domain, Application, Infrastructure, Api)
 - Validações de negócio:
   - Título obrigatório e único
