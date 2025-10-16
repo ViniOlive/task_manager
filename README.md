@@ -31,21 +31,21 @@ Containerização
 ------------------------------------------------------------
 📂 Estrutura do Projeto
 
-task-manager/
-│
-├── backend/
-│   ├── TaskManager.Api/           # API principal (Controllers e configuração)
-│   ├── TaskManager.Application/   # Regras de negócio e casos de uso
-│   ├── TaskManager.Domain/        # Entidades e contratos
-│   ├── TaskManager.Infrastructure/# Repositórios e persistência com EF Core
-│   └── Dockerfile                 # Dockerfile do backend (.NET 9)
-│
-├── frontend/
-│   ├── src/                       # Código React
-│   ├── public/
-│   └── Dockerfile                 # Dockerfile do frontend (React + Nginx)
-│
-└── docker-compose.yml             # Orquestra todos os serviços
+- task-manager/
+- │
+- ├── backend/
+- │   ├── TaskManager.Api/           # API principal (Controllers e configuração)
+- │   ├── TaskManager.Application/   # Regras de negócio e casos de uso
+- │   ├── TaskManager.Domain/        # Entidades e contratos
+- │   ├── TaskManager.Infrastructure/# Repositórios e persistência com EF Core
+- │   └── Dockerfile                 # Dockerfile do backend (.NET 9)
+- │
+- ├── frontend/
+- │   ├── src/                       # Código React
+- │   ├── public/
+- │   └── Dockerfile                 # Dockerfile do frontend (React + Nginx)
+- │
+- └── docker-compose.yml             # Orquestra todos os serviços
 
 ------------------------------------------------------------
 ⚙️ Como Executar o Projeto
@@ -82,12 +82,11 @@ Ou use a interface React:
 ------------------------------------------------------------
 🧰 Comandos Úteis
 
-docker compose up -d      -> Sobe os containers
-docker compose down       -> Para os containers
-docker compose down -v    -> Remove containers e volumes (zera o banco)
-docker logs -f taskmanager_api   -> Exibe logs da API
-docker exec -it taskmanager_db /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "Your_password123"  -> Acessa o SQL Server
-
+- docker compose up -d      -> Sobe os containers
+- docker compose down       -> Para os containers
+- docker compose down -v    -> Remove containers e volumes (zera o banco)
+- docker logs -f taskmanager_api   -> Exibe logs da API
+- docker exec -it taskmanager_db /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "Your_password123"  -> Acessa o SQL Server
 ------------------------------------------------------------
 🧩 Estrutura das Entidades
 
