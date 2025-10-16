@@ -65,10 +65,10 @@ Passos:
 3. Abra o terminal na pasta raiz do projeto
 
 4. Construa e suba os containers executando o comando
-   docker compose up -d --build no terminal.
+   docker compose up -d --build no terminal
 
-5. Verifique se os containers estão rodando
-   docker ps
+5. Verifique se os containers estão rodando o comando
+   docker ps no terminal
 
 6. Acesse os serviços:
    - Frontend: http://localhost:3000
@@ -91,7 +91,7 @@ Ou use a interface React:
 - docker compose down       -> Para os containers
 - docker compose down -v    -> Remove containers e volumes (zera o banco)
 - docker logs -f taskmanager_api   -> Exibe logs da API
-- docker exec -it taskmanager_db /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "Your_password123"  -> Acessa o SQL Server
+- docker exec -it taskmanager_db /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "Nova_Senha_Forte!456"  -> Acessa o SQL Server
 
 ------------------------------------------------------------
 🧩 Estrutura das Entidades
