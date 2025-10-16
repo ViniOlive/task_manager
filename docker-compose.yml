@@ -1,6 +1,7 @@
 services:
   db:
     image: mcr.microsoft.com/mssql/server:2022-latest
+    mem_limit: 3g
     container_name: taskmanager_db
     environment:
       SA_PASSWORD: "Nova_Senha_Forte!456"
@@ -14,6 +15,7 @@ services:
     build:
       context: ./TaskManager
       dockerfile: Dockerfile
+    mem_limit: 1g
     container_name: taskmanager_api
     ports:
       - "8080:8080"
@@ -29,6 +31,7 @@ services:
     build:
       context: ./apptaskmanager
       dockerfile: Dockerfile
+    mem_limit: 1g
     container_name: taskmanager_app
     ports:
       - "3000:80"
