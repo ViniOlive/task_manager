@@ -3,6 +3,8 @@ TaskManager - Guia de Execução
 Um sistema completo de gerenciamento de tarefas, desenvolvido com .NET 9 (ASP.NET Core) no backend, React no frontend e SQL Server como banco de dados.
 O projeto está totalmente containerizado com Docker, permitindo executar tudo com um único comando.
 
+Video explicativo do projeto - Link: https://drive.google.com/file/d/1JjfxLymftcLzJe-1HBNuS7aF1OPZgUip/view?usp=sharing
+
 ------------------------------------------------------------
 🚀 Tecnologias Utilizadas
 
@@ -58,14 +60,17 @@ Passos:
 1. Clone o repositório
    git clone https://github.com/seu-usuario/task-manager.git
    cd task-manager
+2. Execute o App Docker Desktop
 
-2. Construa e suba os containers
-   docker compose up -d --build
+3. Abra o terminal na pasta raiz do projeto
 
-3. Verifique se os containers estão rodando
+4. Construa e suba os containers executando o comando
+   docker compose up -d --build no terminal.
+
+5. Verifique se os containers estão rodando
    docker ps
 
-4. Acesse os serviços:
+6. Acesse os serviços:
    - Frontend: http://localhost:3000
    - API (Swagger): http://localhost:8080/swagger
    - Banco de Dados: localhost,1433 (usuário: sa, senha: Nova_Senha_Forte!456)
