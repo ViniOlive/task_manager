@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Threading;
 using TaskManager.Application.Interfaces;
 using TaskManager.Domain.Entities;
 
@@ -34,6 +35,11 @@ namespace TaskManager.Api.Controllers
 
             if (exists)
                 return Conflict("Já existe uma tarefa com esse título.");
+            
+            TimeZoneInfo brasiliaTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Brazil/East");
+            DateTime brazilianTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, brasiliaTimeZone);
+
+            item.DataCriacao = brazilianTime;
 
             if (item.DataConclusao.HasValue)
             {
@@ -43,8 +49,6 @@ namespace TaskManager.Api.Controllers
                 if (conclusao < criacao)
                     return BadRequest("Data de conclusão não pode ser anterior à data de criação.");
             }
-
-            item.DataCriacao = DateTime.UtcNow;
 
             await _repo.AddAsync(item);
             return CreatedAtAction(nameof(Get), new { id = item.Id }, item);

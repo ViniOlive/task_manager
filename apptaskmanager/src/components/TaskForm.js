@@ -47,7 +47,7 @@ function TaskForm() {
       const duplicated = allTasks.data.some(
         (t) =>
           t.titulo.trim().toLowerCase() === titulo.trim().toLowerCase() &&
-          (!id || t.id !== parseInt(id))
+          (t.id !== parseInt(id))
       );
 
       if (duplicated) {
@@ -58,8 +58,15 @@ function TaskForm() {
       console.error("Erro ao validar duplicidade:", err);
     }
 
-    const now = new Date().toISOString().split("T")[0];
-    const creationDate = id ? null : now;
+    const now = new Date();
+    const opcoes = {   
+      timeZone: 'America/Sao_Paulo',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    };
+    const datetimebrazil = now.toLocaleString('pt-BR', opcoes).split('/').reverse().join('-');
+    const creationDate = id ? null : datetimebrazil;
     if (dataConclusao) {
       const conclusao = new Date(dataConclusao).toISOString().split("T")[0];
       if (conclusao < creationDate) {
