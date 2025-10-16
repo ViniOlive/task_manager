@@ -1,0 +1,101 @@
+body {
+    background-color: #f4f7f6;
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+}
+
+.app-container {
+    max-width: 1010px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+nav {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px !important;
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    padding: 0 10px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #0056b3;
+}
+
+input[type="text"], input[type="date"], select, textarea { 
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 100%; 
+    height: 100%;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 120px;
+    min-width: 120px;
+    resize: vertical;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead tr {
+    background-color: #e9ecef;
+    color: #333;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.button-action, button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, opacity 0.3s;
+    margin: 0 5px;
+}
+
+button.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.link-edit {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    background-color: #ffc107;
+    color: #333;
+}
+
+.link-edit:hover {
+    background-color: #e0a800;
+}

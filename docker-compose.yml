@@ -1,0 +1,39 @@
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: taskmanager_db
+    environment:
+      SA_PASSWORD: "Nova_Senha_Forte!456"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
+    restart: always
+  api:
+    build:
+      context: ./TaskManager
+      dockerfile: Dockerfile
+    container_name: taskmanager_api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=db,1433;Database=TaskManagerDb;User Id=sa;Password=Nova_Senha_Forte!456;TrustServerCertificate=True;
+    restart: always
+
+  frontend:
+    build:
+      context: ./apptaskmanager
+      dockerfile: Dockerfile
+    container_name: taskmanager_app
+    ports:
+      - "3000:80"
+    depends_on:
+      - api
+    restart: always
+
+volumes:
+  sql_data:

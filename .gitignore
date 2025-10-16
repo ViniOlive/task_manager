@@ -1,0 +1,11 @@
+# Cache e build temporário do Visual Studio
+.vs/
+bin/
+obj/
+*.user
+*.suo
+Apresentacao_Do_Projeto.mp4
+*.mp4
+
+# Logs e temporários
+*.log
