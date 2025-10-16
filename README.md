@@ -58,14 +58,17 @@ Passos:
 1. Clone o repositório
    git clone https://github.com/seu-usuario/task-manager.git
    cd task-manager
+2. Execute o App Docker Desktop
 
-2. Construa e suba os containers
-   docker compose up -d --build
+3. Abra o terminal na pasta raiz do projeto
 
-3. Verifique se os containers estão rodando
+4. Construa e suba os containers executando o comando
+   docker compose up -d --build no terminal.
+
+5. Verifique se os containers estão rodando
    docker ps
 
-4. Acesse os serviços:
+6. Acesse os serviços:
    - Frontend: http://localhost:3000
    - API (Swagger): http://localhost:8080/swagger
    - Banco de Dados: localhost,1433 (usuário: sa, senha: Nova_Senha_Forte!456)
